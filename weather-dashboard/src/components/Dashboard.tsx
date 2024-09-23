@@ -4,7 +4,7 @@ import WeatherWidget from './WeatherWidget';
 import { TemperatureContext } from './TemperatureContextType';
 
 interface DashboardState {
-  widgets: { id: string; city: string }[]; // Update to include city
+  widgets: { id: string; city: string }[]; 
 }
 
 const Dashboard: React.FC = () => {
@@ -25,8 +25,7 @@ const Dashboard: React.FC = () => {
   }, [widgets]);
 
   const addWidget = () => {
-    // Example: You can prompt for city or use a default one
-    const city = prompt("Enter city name:", "New York") || "New York"; // Default city
+    const city = prompt("Enter city name:", "New York") || "New York"; 
     setWidgets([...widgets, { id: `widget-${Date.now()}`, city }]);
   };
 

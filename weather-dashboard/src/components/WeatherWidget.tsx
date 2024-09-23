@@ -2,7 +2,7 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { Card, CardContent, Typography, IconButton, CircularProgress } from '@mui/material';
 import { FaTimes as CloseIcon, FaSun as SunIcon, FaCloud as CloudIcon, FaCloudRain as RainIcon } from 'react-icons/fa';
-import { TemperatureContext } from './TemperatureContextType'; // Assuming you have created this context
+import { TemperatureContext } from './TemperatureContextType'; 
 import axios from 'axios';
 
 interface WeatherWidgetProps {
@@ -17,7 +17,6 @@ interface WeatherData {
   city: string;
 }
 
-// Use your valid API Key from OpenWeatherMap
 const API_KEY = 'a8dc08fe85a3d32008133cd813af4f63';
 
 const WeatherWidget: React.FC<WeatherWidgetProps> = ({ id, city, onRemove }) => {
@@ -49,10 +48,10 @@ const WeatherWidget: React.FC<WeatherWidgetProps> = ({ id, city, onRemove }) => 
       };
   
       fetchWeather();
-      const interval = setInterval(fetchWeather, 600000); // Update every 10 minutes
+      const interval = setInterval(fetchWeather, 600000); 
   
       return () => clearInterval(interval);
-    }, [city]); // Update the effect if the city changes
+    }, [city]); 
   
     const convertTemperature = (temp: number): number => {
       if (unit === 'fahrenheit') {
