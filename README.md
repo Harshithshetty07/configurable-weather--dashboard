@@ -19,9 +19,11 @@ npm (comes with Node.js)
 Installation
 Clone the repository: git clone https://github.com/yourusername/weather-dashboard.git
 
-Navigate to the project directory: cd weather-dashboard
+Navigate to the project directory: 
+cd weather-dashboard
 
-Install dependencies: npm install
+Install dependencies: 
+npm install
 
 Project Structure
 
